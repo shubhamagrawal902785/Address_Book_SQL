@@ -121,3 +121,16 @@ mysql> select Count(*) from addressbook where city='farah' and state='up';
 |        1 |
 +----------+
 1 row in set (0.00 sec)
+
+
+//sort person name
+
+mysql> select * from addressbook where city='mathura' order by first_name;
++----+------------+-----------+---------+---------+--------------+---------+--------------+---------------+
+| id | first_name | last_name | address | city    | state        | zip     | phone_number | email         |
++----+------------+-----------+---------+---------+--------------+---------+--------------+---------------+
+|  4 | gyanesh    | agrawal   | farah   | mathura | uttarpradesh | 2811222 |       856477 | gya@gmail.com |
++----+------------+-----------+---------+---------+--------------+---------+--------------+---------------+
+1 row in set (0.04 sec)
+
+mysql> ^C
