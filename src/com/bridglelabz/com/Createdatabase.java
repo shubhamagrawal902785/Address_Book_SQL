@@ -79,3 +79,23 @@ mysql> select * from addressbook;
 |  4 | gyanesh    | agrawal   | farah   | mathura | up    | 2811222 |       856477 | gya@gmail.com     |
 +----+------------+-----------+---------+---------+-------+---------+--------------+-------------------+
 2 rows in set (0.00 sec)
+
+//retrive table in a database city and state
+
+mysql> select * from addressbook where state='up';
++----+------------+-----------+---------+-------+-------+--------+--------------+-------------------+
+| id | first_name | last_name | address | city  | state | zip    | phone_number | email             |
++----+------------+-----------+---------+-------+-------+--------+--------------+-------------------+
+|  2 | shubham    | agrawal   | mathura | farah | up    | 281122 |       902785 | shubham@gmail.com |
++----+------------+-----------+---------+-------+-------+--------+--------------+-------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from addressbook where city='mathura';
++----+------------+-----------+---------+---------+--------------+---------+--------------+---------------+
+| id | first_name | last_name | address | city    | state        | zip     | phone_number | email         |
++----+------------+-----------+---------+---------+--------------+---------+--------------+---------------+
+|  4 | gyanesh    | agrawal   | farah   | mathura | uttarpradesh | 2811222 |       856477 | gya@gmail.com |
++----+------------+-----------+---------+---------+--------------+---------+--------------+---------------+
+1 row in set (0.00 sec)
+
+mysql>
