@@ -64,3 +64,18 @@ mysql> select * from addressbook;
 |  5 | amit       | pan       | cali    | ami     | us    |  546895 |       589745 | yan@gmail.com     |
 +----+------------+-----------+---------+---------+-------+---------+--------------+-------------------+
 3 rows in set (0.01 sec)
+
+//delet person name
+
+
+mysql> delete from addressbook where id=5;
+Query OK, 1 row affected (0.19 sec)
+
+mysql> select * from addressbook;
++----+------------+-----------+---------+---------+-------+---------+--------------+-------------------+
+| id | first_name | last_name | address | city    | state | zip     | phone_number | email             |
++----+------------+-----------+---------+---------+-------+---------+--------------+-------------------+
+|  2 | shubham    | agrawal   | mathura | farah   | up    |  281122 |       902785 | shubham@gmail.com |
+|  4 | gyanesh    | agrawal   | farah   | mathura | up    | 2811222 |       856477 | gya@gmail.com     |
++----+------------+-----------+---------+---------+-------+---------+--------------+-------------------+
+2 rows in set (0.00 sec)
