@@ -184,3 +184,36 @@ mysql> select * from addressbook;
 4 rows in set (0.00 sec)
 
 mysql>
+
+
+//add person friend and family
+
+mysql> update addressbook set type='family' where first_name='mohit';
+Query OK, 1 row affected (0.14 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from addressbook;
++----+------------+-----------+------------+---------+---------+--------------+---------+--------------+-------------------+
+| id | first_name | last_name | type       | address | city    | state        | zip     | phone_number | email             |
++----+------------+-----------+------------+---------+---------+--------------+---------+--------------+-------------------+
+|  2 | shubham    | agrawal   | profession | mathura | farah   | up           |  281122 |       902785 | shubham@gmail.com |
+|  4 | gyanesh    | agrawal   | NULL       | farah   | mathura | uttarpradesh | 2811222 |       856477 | gya@gmail.com     |
+|  6 | mohit      | goyal     | family     | mauha   | harda   | raj          |  281789 |       944585 | mohit@gmail.com   |
+|  8 | namen      | tayal     | profession | majja   | bhun    | urisha       |  284559 |       978985 | name@gmail.com    |
++----+------------+-----------+------------+---------+---------+--------------+---------+--------------+-------------------+
+4 rows in set (0.04 sec)
+
+mysql> update addressbook set type='friends' where first_name='gyanesh';
+Query OK, 1 row affected (0.13 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from addressbook;
++----+------------+-----------+------------+---------+---------+--------------+---------+--------------+-------------------+
+| id | first_name | last_name | type       | address | city    | state        | zip     | phone_number | email             |
++----+------------+-----------+------------+---------+---------+--------------+---------+--------------+-------------------+
+|  2 | shubham    | agrawal   | profession | mathura | farah   | up           |  281122 |       902785 | shubham@gmail.com |
+|  4 | gyanesh    | agrawal   | friends    | farah   | mathura | uttarpradesh | 2811222 |       856477 | gya@gmail.com     |
+|  6 | mohit      | goyal     | family     | mauha   | harda   | raj          |  281789 |       944585 | mohit@gmail.com   |
+|  8 | namen      | tayal     | profession | majja   | bhun    | urisha       |  284559 |       978985 | name@gmail.com    |
++----+------------+-----------+------------+---------+---------+--------------+---------+--------------+-------------------+
+4 rows in set (0.00 sec)
